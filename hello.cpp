@@ -1,10 +1,13 @@
 #include <iostream>
 
-void sayHello() {
-	std::cout << "Hello, world!" << std::endl;
+void sayHello(const std::string &name) {
+	std::cout << "Hello, " << name << "!" << std::endl;
 }
 
 int main() {
-	sayHello();
+	std::cout << "Enter your name: ";
+	std::string name;
+	std::getline(std::cin, name);
+	sayHello(name);
 	return 0;
 }
